@@ -1,3 +1,4 @@
+import 'package:bpbd/lapor.dart';
 import 'package:bpbd/log.dart';
 import 'package:bpbd/telp/telp.dart';
 import 'package:bpbd/weather.dart';
@@ -120,40 +121,84 @@ class _HomeState extends State<Home> {
                         )
                       ],
                     ),
-                    Container(
-                      margin: EdgeInsets.all(15),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.all(15),
-                            width: 70,
-                            height: 70,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage("assets/images/telp.png"),
-                                    fit: BoxFit.cover)),
-                            child: Material(
-                              color: Colors.transparent,
-                              child: InkWell(
-                                borderRadius: BorderRadius.circular(20),
-                                splashColor: Colors.orange,
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const Telephone()),
-                                  );
-                                },
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.all(15),
+                          child: Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.all(15),
+                                width: 70,
+                                height: 70,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/images/telp.png"),
+                                        fit: BoxFit.cover)),
+                                child: Material(
+                                  color: Colors.transparent,
+                                  child: InkWell(
+                                    borderRadius: BorderRadius.circular(20),
+                                    splashColor: Colors.orange,
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Telephone()),
+                                      );
+                                    },
+                                  ),
+                                ),
                               ),
-                            ),
+                              Text(
+                                "Nomor Penting",
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              )
+                            ],
                           ),
-                          Text(
-                            "Nomor Penting",
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          )
-                        ],
-                      ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(15),
+                          child: Column(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.all(15),
+                                width: 70,
+                                height: 70,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/images/lapor.png"),
+                                        fit: BoxFit.cover)),
+                                child: Material(
+                                  color: Colors.transparent,
+                                  child: InkWell(
+                                    borderRadius: BorderRadius.circular(20),
+                                    splashColor: Colors.orange,
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Lapor()),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                "Lapor Kejadian",
+                                style: TextStyle(
+                                    fontSize: 15, color: Colors.white),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     )
                   ],
                 ),
